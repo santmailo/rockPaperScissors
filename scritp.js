@@ -10,13 +10,14 @@ function getComputerChoice(){
 
 function playRound(){
     const computerChoice = getComputerChoice();
-    const playerSelection = prompt("Enter your value");
+    const playerSelection = prompt("Enter your value:- Rock,Paper,Scissor");
     playerSelection.toLowerCase();
     if(playerSelection==="rock" && computerChoice ==="paper") {return `You Lose! ${computerChoice} beats ${playerSelection}`;}
     else if(playerSelection==="paper" && computerChoice === "scissor")  {return `You Lose! ${computerChoice} beats ${playerSelection}`;}
     else if(playerSelection==="scissor" && computerChoice === "rock") {return `You Lose! ${computerChoice} beats ${playerSelection}`;}
     else if(playerSelection===computerChoice) {return `You and Computer is battling ${playerSelection} vs ${computerChoice}`;}
-    else {return `Hooray!! You Win ${playerSelection} beats ${computerChoice}`};
+    else if(playerSelection == "rock" ||playerSelection == "paper" || playerSelection == "scissor") {return `Hooray!! You Win ${playerSelection} beats ${computerChoice}`};
+    return "Please type valid options ";
 }
 
 var bag = "";
